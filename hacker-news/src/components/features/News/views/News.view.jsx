@@ -30,12 +30,12 @@ const NewsView = ({ className, news, hideComment, upVotes }) => {
     pageInfo: { pageNumber, totalPages },
   } = news;
   const nextPageURL =
-    pageNumber < totalPages ? `/news?p=${news.pageInfo.nextPage}` : "/news";
+    pageNumber < totalPages ? `/news?p=${news.pageInfo.nextPage}` : "/";
   return (
     <div className={className}>
       <Header />
 
-      <div>{renderNewsData(news, hideComment, upVotes)}</div>
+      <ul>{renderNewsData(news, hideComment, upVotes)}</ul>
       <div>
         <Link href={nextPageURL}>
           <a className="moreLink" href={nextPageURL}>
