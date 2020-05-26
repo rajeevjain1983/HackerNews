@@ -6,7 +6,6 @@ export default css`
   padding-left: 30px;
   font-size: 12pt;
   color: #000000;
-  /* border: 1px solid black; */
   background-color: ${(props) =>
     props.rowNumber % 2 === 0 ? "#DADAD3" : "transparent"};
 
@@ -32,13 +31,7 @@ export default css`
   .comments {
     min-width: 50px;
   }
-  .upVotes {
-    min-width: 30px;
-    padding-right: 4px;
-    /* display: flex;
-    align-items: center; */
-    /* border: 1px solid black; */
-  }
+
   .col {
     display: flex;
     align-items: center;
@@ -54,9 +47,17 @@ export default css`
     border: none;
     outline: none;
   }
+  .upVotes {
+    min-width: 20px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-start;
 
+    button {
+      padding: 0;
+    }
+  }
   .voteArrow {
-    /* border: 1px solid black; */
     margin-left: 4px;
     background-size: 10px;
     width: 10px;
